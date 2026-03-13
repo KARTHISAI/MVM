@@ -4,6 +4,7 @@ import { Label } from "../ui/label";
 import { useEffect, useRef } from "react";
 import { Button } from "../ui/button";
 import axios from "axios";
+import { BASE_URL } from "../../config";
 import { Skeleton } from "../ui/skeleton";
 
 function ProductImageUpload({
@@ -50,7 +51,7 @@ function ProductImageUpload({
     const data = new FormData();
     data.append("my_file", imageFile);
     const response = await axios.post(
-      "http://localhost:5000/api/admin/products/upload-image",
+      `${BASE_URL}/api/admin/products/upload-image`,
       data
     );
     console.log(response, "response");

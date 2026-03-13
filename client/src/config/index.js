@@ -1,3 +1,5 @@
+// ...existing code...
+export const BASE_URL = import.meta.env.VITE_BASE_URL || process.env.BASE_URL || "https://mvmbackend.vercel.app";
 export const registerFormControls = [
   {
     name: "userName",
